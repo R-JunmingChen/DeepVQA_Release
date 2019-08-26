@@ -1,0 +1,46 @@
+common:
+    database:
+        scenes: all
+        horz_ref: False
+        n_frm_trte: 12
+        patch_mode: shift_center
+        color: gray
+        train_size: 0.8
+    model:
+        model: VQA_Deep.models.FR_sens_VQA_stage1
+#        model: VQA_Deep.models.FR_sens_VQA_stage2
+        ign: 4
+        ign_scale: 8
+        # batch_norm_err: False
+        batch_norm_sens: False #False
+        opt_scheme: adam
+        lr: 1e-4
+        wr_l2: 3e-3
+        wr_tv: 1e-2
+    training:
+        batch_size: 1
+        minibatch_size: 1
+        epochs: 400
+        test_freq: 2
+        save_freq: 1
+        regular_snap_freq: 50
+        n_imgs_to_record: 30
+        prefix: 'FR_sens_'
+
+fr_sens_LIVE_VQA:
+    database:
+        sel_data: LIVE_VQA
+        dist_types: all
+        patch_size: [112, 112]
+    model:
+        opt_scheme: nadam
+        lr: 5e-4
+
+fr_sens_CSIQ_VQA:
+    database:
+        sel_data: CSIQ_VQA
+        dist_types: all
+        patch_size: [112, 112]
+    model:
+        opt_scheme: nadam
+        lr: 5e-4
