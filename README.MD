@@ -11,6 +11,7 @@ This code was developed and tested with Theano 1.0.2, CUDA 9.0, and Windows pyth
 ### Setting database path:
 For each database, set `BASE_PATH` to the actual root path of each database in the following file:
 `IQA_DeepQA_FR_release/data_load/LIVE_VQA.py`.
+`IQA_DeepQA_FR_release/data_load/CSIQ_VQA.py`.
 
 ## Training DeepVQA
 We provide the demo code for training a DeepVQA model.
