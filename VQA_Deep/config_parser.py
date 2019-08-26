@@ -80,20 +80,9 @@ def config_parser(config_file, section=None, default_config_file=None):
         overwrite_config(model_config, config_data['model'])
     if 'training' in list(config_data.keys()):
         overwrite_config(train_config, config_data['training'])
-
     check_subsection(db_config)
-
-    # if db_config['num_subsection']:
-    #     if db_config['train']['num_subsection']:
-    #         copy_config(db_config['train'], db_config['train'][0])
-    #         copy_config(db_config, db_config['train'][0])
-    #     else:
-    #         copy_config(db_config, db_config['train'])
-
     show_configs(db_config, model_config, train_config)
-
     return db_config, model_config, train_config
-
 
 def dump_config(filename, db_config, model_config, train_config):
     cfg = {}
@@ -165,25 +154,6 @@ def copy_config(base_config, new_config):
 
 
 def show_configs(db_config, model_config, train_config):
-    # if 'train' in db_config:
-    #     print('Train Dataset: %s' % db_config['train']['sel_data'])
-    #     print(' - Scenes:', db_config['train']['scenes'], end='')
-    #     print(' / dist_types:', db_config['train']['dist_types'])
-    #     print(' - Patch size:', db_config['train']['patch_size'], end='')
-    #     print(' / Patch step:', db_config['train']['patch_step'])
-
-    #     print('Test Dataset: %s' % db_config['test']['sel_data'])
-    #     print(' - Scenes:', db_config['test']['scenes'], end='')
-    #     print(' / dist_types:', db_config['test']['dist_types'])
-    #     print(' - Patch size:', db_config['test']['patch_size'], end='')
-    #     print(' / Patch step:', db_config['test']['patch_step'])
-    # else:
-    #     print('Dataset: %s' % db_config['sel_data'])
-    #     print(' - Scenes:', db_config['scenes'], end='')
-    #     print(' / dist_types:', db_config['dist_types'])
-    #     print(' - Patch size:', db_config['patch_size'], end='')
-    #     print(' / Patch step:', db_config['patch_step'])
-
     print('Model: %s' % model_config['model'])
     print(' - opt_scheme:', model_config['opt_scheme'], end='')
     print(' / lr:', model_config['lr'])
