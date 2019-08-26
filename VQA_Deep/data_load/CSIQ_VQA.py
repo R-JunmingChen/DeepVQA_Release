@@ -2,8 +2,7 @@ from __future__ import absolute_import, division, print_function
 import numpy as np
 
 # Define DB information
-BASE_PATH = 'D:\DB\VQA\CSIQ VQA DB'
-# BASE_PATH = 'Your DB path'
+BASE_PATH = 'Your DB path'
 LIST_FILE_NAME = 'CSIQ_VQA.txt'
 ALL_SCENES = list(range(12))
 ALL_DIST_TYPES = list(range(7)) #including reference
