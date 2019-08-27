@@ -11,7 +11,7 @@ ALL_DIST_TYPES = list(range(7)) #including reference
 def make_image_list(scenes, dist_types=None, show_info=True):
     """
     Make image list from CSIQ VIDEO database
-    CSIQ: 12 reference images x 7 types (including REFERENCE)
+    CSIQ: 12 reference videos x 7 types (including REFERENCE)
     """
     # Get reference / distorted image file lists:
     # d_img_list and score_list

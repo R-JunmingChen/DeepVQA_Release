@@ -11,7 +11,7 @@ ALL_DIST_TYPES = list(range(5)) #including reference
 def make_image_list(scenes, dist_types=None, show_info=True):
     """
     Make image list from LIVE VIDEO database
-    LIVE: 10 reference images x 5 types (including REFERENCE)
+    LIVE: 10 reference videos x 5 types (including REFERENCE)
     """
     # Get reference / distorted image file lists:
     d_vid_list, r_vid_list, r_idx_list, score_list, fps_list = [], [], [], [], []
