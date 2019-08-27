@@ -1,18 +1,15 @@
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = '0'
-
+from VQA_Deep import train_vqa as tm
 ########################################################################################################################
-# DeepVQA.ver2
-# (training prosess update)
+# DeepVQA
+# ver2 (training prosess update)
 
 # Kim, Woojae, et al.
 # "Deep video quality assessor: From spatio-temporal visual sensitivity to a convolutional neural aggregation network."
 # Proceedings of the European Conference on Computer Vision (ECCV). 2018.
-# This code was developed and tested with Theano 0.9, CUDA 9.0, and Windows.
-
+# This code was developed and tested with Theano 1.0.2, CUDA 9.0, and Windows python.
 ########################################################################################################################
-from VQA_Deep import train_vqa as tm
-
 tm.train_vqa(
     # config parser
     config_file='VQA_Deep/configs/FR_sens_VQA.yaml',
@@ -34,7 +31,6 @@ tm.train_vqa(
     snap_path='outputs/FR/FR_sens_LIVE_VQA/',
     ############# CSIQ_VQA ##############
     # snap_path='outputs/FR/FR_sens_CSIQ_VQA/',
-
 
     ############# snap file load ##############
     # if user tests STAGE 2, Load below snap_file which is fully trained in STAGE 1.
