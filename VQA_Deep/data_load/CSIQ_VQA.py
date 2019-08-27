@@ -2,7 +2,7 @@ from __future__ import absolute_import, division, print_function
 import numpy as np
 
 # Define DB information
-BASE_PATH = 'Your DB path'
+BASE_PATH = 'D:/DB/VQA/CSIQ VQA DB'
 LIST_FILE_NAME = 'CSIQ_VQA.txt'
 ALL_SCENES = list(range(12))
 ALL_DIST_TYPES = list(range(7)) #including reference
@@ -38,12 +38,14 @@ def make_image_list(scenes, dist_types=None, show_info=True):
     n_videos = len(d_vid_list)
 
     dist_names = ['ref', 'AVC', 'Packet', 'MJPEG', 'Wavelet', 'WN', 'HEVC']
-    # H.264 / AVC compression
-    # H.264 video with packet loss rate
-    # MJPEG compression
-    # Wavelet compression(snow codec)
-    # White noise
-    # HEVC compression
+    # Distortion types
+    # 0 = ref
+    # 1 = H.264 / AVC compression
+    # 2 = H.264 video with packet loss rate
+    # 3 = MJPEG compression
+    # 4 = Wavelet compression(snow codec)
+    # 5 = White noise
+    # 6 = HEVC compression
 
     if show_info:
         scenes.sort()
