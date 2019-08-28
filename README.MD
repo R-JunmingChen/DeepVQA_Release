@@ -25,7 +25,7 @@ python example_fr_VQA.py
 - The model has stage1 and stage2, we recommend that user firstly train only stage 1, and by using trained weights (snap_file), train stage 2. Training both stage 1 and 2 is not currently trainable as mentioned in the paper.
 
 ## Quantitative results
-DeepVQA was tested on the full-sets (randomly divided 10 sets) of LIVE VQA, CSIQ VQA databases. During the experiment, we randomly divided the reference images into two subsets, 80% for training and 20% for testing. The correlation coefﬁcients were averaged after the procedure was repeated 10 times while dividing the training and testing sets randomly.
+DeepVQA was tested on the full-sets (randomly divided 10 sets) of LIVE VQA, CSIQ VQA databases. During the experiment, we randomly divided the reference images into two subsets, 80% for training and 20% for testing. The correlation coefﬁcients were averaged after the procedure was repeated ~10 times while dividing the training and testing sets randomly.
 
 ### Performance of DeepVQA (Stage 1)
 Note that the performance can be slightly different by training/testing sets.
