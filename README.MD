@@ -22,12 +22,12 @@ python example_fr_VQA.py
 - `tr_te_file`: Store the randomly divided (training and testing) reference video indices in this file.
 - `snap_path`: This indicates the path to store snapshot files.
 - `LIVE_VQA.txt`: This .txt contains each databases' sequence names with MOS/DMOS, fps(fps∙times), and resolution including reference data. Note that, when the training step, the test set does not include reference data for a fair comparison.
-- The model has step1 and step2, we recommend that user firstly train only step 1, and by using trained weights (snap_file), train step 2. Training both step 1 and 2 is not currently trainable as mentioned in the paper.
+- The model has stage 1 and stage 2, we recommend that user firstly train only stage 1, and by using trained weights (snap_file), train stage 2. Training both stage 1 and 2 is not currently trainable as mentioned in the paper.
 
 ## Quantitative results
 DeepVQA was tested on the full-sets (randomly divided 10 sets) of LIVE VQA, CSIQ VQA databases. During the experiment, we randomly divided the reference images into two subsets, 80% for training and 20% for testing. The correlation coefﬁcients were averaged after the procedure was repeated ~10 times while dividing the training and testing sets randomly.
 
-### Performance of DeepVQA (step1)
+### Performance of DeepVQA (stage 1)
 Note that the performance can be slightly different by training/testing sets.
 
 |Database |SRCC  |PLCC  |
