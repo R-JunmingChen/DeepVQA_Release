@@ -21,7 +21,7 @@ python example_fr_VQA.py
 
 - `tr_te_file`: Store the randomly divided (training and testing) reference video indices in this file.
 - `snap_path`: This indicates the path to store snapshot files.
-- `LIVE_VQA.txt`: This .txt contains each databases' sequence names with MOS/DMOS, fps, and resolution info' including reference data. Note that, when the training step, the test set does not include reference data for a fair comparison.
+- `LIVE_VQA.txt`: This .txt contains each databases' sequence names with MOS/DMOS, fps(fps∙times), and resolution including reference data. Note that, when the training step, the test set does not include reference data for a fair comparison.
 - The model has stage1 and stage2, we recommend that user firstly train only stage 1, and by using trained weights (snap_file), train stage 2. Training both stage 1 and 2 is not currently trainable as mentioned in the paper.
 
 ## Quantitative results
